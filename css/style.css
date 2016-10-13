@@ -1,0 +1,92 @@
+body{
+
+}
+
+div.header{
+	height: 852px;
+	background-image: url(/image/header.png);
+	background-size: cover;
+	background-repeat: no-repeat;
+
+}
+.header h1.header-text{
+	padding: 300px 0 0 0;
+	color: white;
+}
+
+div.action{
+	height: 1080px;
+	background-image: url(/image/wr-1.sky.jpg);
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+
+div.action div.game{
+	margin-top: 100px;
+	padding: 100px 0 100px 0;
+	background-image: url(/image/wr-1.flower-2.jpg);
+	background-size: cover;
+	color: black;
+}
+div.action p.text{
+	font-size: 25px;
+}
+
+div.action p.action-btn{
+	margin-top: 50px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/************сетка bootstrap****************/
+@media screen and (max-width: 767px){
+	.masonry[data-columns]::before{
+		content: '1 .col-xs-12';
+	}
+}
+@media screen and (min-width: 768px) and (max-width: 991px){
+	.masonry[data-columns]::before{
+		content: '2 .col-xs-6';
+	}	
+}
+@media screen and (min-width: 992px) and (max-width: 1199px){
+	.masonry[data-columns]::before{
+		content: '3 .col-md-4';
+	}
+}
+@media screen and (min-width: 1200px){
+	.masonry[data-columns]::before{
+		content: '3 .col-xs-4';
+	}
+}
+
+
+/*********************fonts ************************/
+@font-face{
+	font-family: assasin;
+	src:url(../fonts/9894.ttf);
+}
+@font-face{
+	font-family: passion;
+	src:url(../fonts/9908.otf);
+}
+@font-face{
+	font-family: ZagBold;
+	src:url(../fonts/9949.otf);
+}
