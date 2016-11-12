@@ -1,75 +1,1085 @@
-<!DOCTYPE html>
+    <!DOCTYPE html>
 <html lang="en">
 <head>
+	<script src="/js/jquery.js"></script>
+	<script src="/js/jquery-ui.js"></script>
 	<meta charset="UTF-8">
 	<title>page</title>
-	<link rel="stylesheet" href="css/bootstrap.css">
+	<link rel="stylesheet" href="/css/bootstrap.css">
 	<link rel="stylesheet" href="css/font-awesome.css">
+	<link rel="stylesheet" href="css/fancyBox/jquery.fancybox.css">
+	<!-- FancyBox -->
+	<script src="js/jquery.fancybox.js"></script>
+	<script src="/js/jquery.fancybox-media.js"></script>
+	<!-- Swiper -->
+	<link rel="stylesheet" href="/css/swiper.css">
+	<script src="/js/swiper.jquery.js"></script>
+	<!-- My style -->
+	<script src="/js/stickyfill.js"></script>
 	<link rel="stylesheet" href="css/style.css">
-	<script src="lib/jquery.js" type="text/javascript"></script>
-	
+	<script>
+		$(function(){
+			$('.fancybox').fancybox();
+
+			$(".fancybox-media").
+				attr("rel","media-gallery")
+				.fancybox({
+					padding : 0,
+
+					openEffect : 'none',
+					closeEffect : 'none',
+					prevEffect : 'none',
+					nextEffect : 'none',
+
+					arrows : false,
+					helpers : {
+						media : {},
+						buttons : {}
+					}
+				});
+		});
+	</script>
 </head>
-<body>
-	
-<div class="header">
-	<div class="container-fluid">
-		<div class="row">
-			 <div class="col-xs-offset-3 col-xs-6">
-			 	<!-- <img src="image/header.png" alt=""> -->
-			 	<h1 class="header-text text-center">
-			 		Hello nigga's and girls, yeah
-			 	</h1>
-			 	<iframe width="560" height="315" src="https://www.youtube.com/embed/RHMNX4-HkAM" frameborder="0" allowfullscreen></iframe>			 	
+<body id="body">
+		
+	<header>
+		<div class="container">
+			 <div class="navbar">
+			 	<div class="navbar-header">
+			 		<a href="#" class="navbar-brand">
+			 			<img class="logo" src="image/header-logo.png" alt="">
+			 		</a>
+			 		<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#resp-menu">
+			 			<span class="icon-bar"></span>
+			 			<span class="icon-bar"></span>
+			 			<span class="icon-bar"></span>
+			 		</button>
+			 	</div>
+			 	<div id="resp-menu" class="collapse navbar-collapse">
+			 		<ul class="nav navbar-nav navbar-left">
+			 			<li id="col-menu" class="item"><a href="#">Дроны</a>
+			 				<div class="children">
+			 					<div class="container child-cont">
+			 						<div class="row">
+			 							<div class="col-lg-6">
+			 								<div class="col-lg-6">
+			 									<p>Потребитель</p>
+			 									<ul>
+			 										<li>
+			 											<a href="#"> mavic</a>
+			 										</li>
+			 										<li>
+			 											<a href="#">
+			 											Phantom 4
+			 											</a>
+			 										</li>
+			 										<li>
+				 										<a href="#">
+				 											Phantom 3 series
+				 										</a>
+			 										</li>
+			 										<li>
+			 											<a href="#">
+			 												Phantom comparison
+			 											</a>
+			 										</li>
+			 									</ul>
+			 								</div>
+			 								<div class="col-lg-6">
+			 									<p>professional </p>
+			 									<ul>
+			 										<li>
+			 											<a href="#">
+			 												inspire 1
+			 											</a> 
+			 										</li>
+			 										<li>
+				 										<a href="#">
+				 											zenmus x-series	
+				 										</a>
+			 										</li>
+			 									</ul>
+			 								</div>
+			 							</div>
+			 							<div class="col-lg-6 child-img">			
+			 								<img src="/image/quad1.jpg" alt="">		
+			 							</div>
+			 						</div>
+			 					</div>			 					
+			 				</div>
+			 			</li>
+			 			<li class="item"><a href="#">Камеры</a></li>
+			 			<li class="item"><a href="#">Промышленные</a></li>
+			 			<li class="item"><a href="#">Сообщество</a></li>
+			 			<li class="item hidden-sm"><a href="#">Поддержка</a></li>
+			 		</ul>
+			 		<div class="head-search-box">
+			 			
+			 		</div>
+			 		<ul class="navbar-add nav navbar-nav navbar-right hidden-sm">
+			 			<li>
+			 				<a href="#">
+			 					<i class="fa fa-search"></i>
+			 				</a>
+			 			</li>
+			 			<li class="nav-shopping-cart">
+			 				<a class="navbar-shop" href="#">
+			 					Каталог <i class="fa fa-shopping-basket"></i>
+			 				</a>
+			 			</li>
+			 			<li><a href="#">Пункт 3</a></li>
+			 		</ul>
+			 	</div>
 			 </div>
 		</div>
-	</div>
-</div>
-<div class="action">
-	<div class="container" style="padding-top: 50px;">
-		<div class="row">
-			<div class="col-xs-3">
-				<p class="text-center"><button id="btn_12" class="btn btn-danger btn-lg">12+</button></p>
+	</header>
+	
+
+
+	<div class="wrapper-1">
+		<div class="container-fluid">
+			<div class="col-xs-12 text-box">
+				<h1 class="text-center">
+					phantom 
+				</h1>
+				<p class="text-center">VISIONARY INTELLIGENCE . ELEVATED IMAGINATION</p>
 			</div>
-			<div class="col-xs-3">
-				<p class="text-center"><button id="btn_14" class="btn btn-danger btn-lg">14+</button></p>
-			</div>
-			<div class="col-xs-3">
-				<p class="text-center"><button id="btn_16" class="btn btn-danger btn-lg">16+</button></p>
-			</div>
-			<div class="col-xs-3">
-				<p class="text-center"><button id="btn_18" class="btn btn-danger btn-lg">Боевое самбо</button></p>
+			<div class="col-xs-12 text-center">
+				<ul>
+					<li>
+						<a class="fancybox-media" href="http://www.youtube.com/watch?v=opj24KnzrWo">
+							<img width="400px" src="/image/phantom4_video.png" alt="">
+							<i class="fa fa-play fa-3x"></i>
+						</a>
+					</li>		
+				</ul>	
+			</div>						
+			<div class="col-xs-12 text-center">
+				<div class="video-list">
+					<div class="video-btn-box">
+						<i class="fa fa-angle-double-up" aria-hidden="true"></i>
+						<br>
+						<span class="text-center text-uppercase">
+							Watch all video
+						</span>
+						<br>
+					</div>
+					<div class="swiper-container swiper-cont">
+											
+						<div class="swiper-wrapper">
+							<!-- SLIDES -->
+							<div class="swiper-slide">
+								<ul>
+									<li>
+										<a class="fancybox-media" href="https://www.youtube.com/embed/79eUwqtNwvY">
+											<img src="/image/one.png" width="255"  alt="">
+										</a>
+									</li>
+									<li>
+										<a class="fancybox-media" href="https://www.youtube.com/embed/x8r-IxaiRbo">
+											<img src="/image/one.png" width="255" height="150" alt="">
+										</a>										
+									</li>
+									<li>
+										<a class="fancybox-media" href="https://www.youtube.com/embed/659O0-UqTtI">
+											<img src="/image/one.png" width="255" height="150" alt="">
+										</a>										
+									</li>
+									<li>
+										<a class="fancybox-media" href="https://youtu.be/-_i8eIJ5K6s">
+											<img src="/image/one.png" width="255" height="150" alt="">
+										</a>
+									</li>
+								</ul>
+							</div>
+							<div class="swiper-slide">
+								<ul>
+									<li>
+										<a class="fancybox-media" href="https://www.youtube.com/embed/79eUwqtNwvY">
+											<img src="/image/one.png" width="255"  alt="">
+										</a>
+									</li>
+									<li>
+										<a class="fancybox-media" href="https://www.youtube.com/embed/x8r-IxaiRbo">
+											<img src="/image/one.png" width="255" height="150" alt="">
+										</a>										
+									</li>
+									<li>
+										<a class="fancybox-media" href="https://www.youtube.com/embed/659O0-UqTtI">
+											<img src="/image/one.png" width="255" height="150" alt="">
+										</a>										
+									</li>
+									<li>
+										<a class="fancybox-media" href="https://youtu.be/-_i8eIJ5K6s">
+											<img src="/image/one.png" width="255" height="150" alt="">
+										</a>
+									</li>
+								</ul>
+							</div>
+						</div>
+
+						<!-- Button navigation -->							
+					    <div class="swiper-button-prev"></div>
+					    <div class="swiper-button-next"></div>
+
+					</div>
+				</div>//end video list
 			</div>
 		</div>
-		<div class="row">
-			<div class="col-xs-12  game">
-				<p id="action-text" class="text text-center"> Действие номер 1 </p>
-			</div>
-			<div class="row">
-				<div class="col-xs-12">
-					<p class="text-center action-btn">
-						<button id="btnNext" class="btn btn-success btn-lg">Next</button>
+	</div>
+
+	
+	<div class="sticky sticky-wrapper visible-lg visible-sm">
+		<div class="container">
+			<nav class="navbar navbar-lg">
+				<div class="navbar-header">
+					<a href="#" class="navbar-brand">Phantom 4</a>
+				</div>
+				<div class="collapse navbar-collapse">
+					<ul class="nav navbar-nav navbar-right">
+						<li><a href="#">specs</a></li>
+						<li><a href="#">phantom</a></li>
+						<li><a href="#">downloads</a></li>
+						<li><a href="#">FAQ</a></li>
+						<li>
+							<a id="toTop" href="" style="width: 150px;">
+								<span class="text-uppercase" id="toTopHover">go to top</span>
+							</a>
+						</li>
+					</ul>
+				</div>
+			</nav>
+		</div>
+	</div>	
+	
+	<div class="wrapper-2">
+		<div class="swiper-container swiper-cont1">
+		    <!-- Additional required wrapper -->
+		    <div class="swiper-wrapper">
+		        <!-- Slides -->
+		        <div class="swiper-slide">
+		        	<div class="container">
+		        		<div class="content-box">
+		        			<div class="video-box">
+		        				<a href="//www.youtube.com/watch?v=DKqGEIfpeiw" class="fancybox-media">
+		        					<img src="/image/phantom3.jpg" width="320px" height="220px">
+		        					<i class="fa fa-play fa-3x"></i>	
+		        				</a>
+		        			</div>
+		        			<h2>Precision Hovering</h2>
+		        			<p>
+		        				Flying is now for everyone. Just double tap and you’re up in the air while the new Obstacle Sensing System keeps your Phantom clear of objects in the way. With another tap, Smart Return Home brings it back.
+		        			</p>
+		        		</div>
+		        	</div>
+		        </div>
+		        <div class="swiper-slide">
+		        	<div class="container">
+		        		<div class="content-box">
+		        			<div class="video-box">
+		        				<a href="//www.youtube.com/watch?v=DKqGEIfpeiw" class="fancybox-media">
+		        					<img src="/image/phantom3.jpg" width="320px" height="220px">
+		        					<i class="fa fa-play fa-3x"></i>	
+		        				</a>
+		        			</div>
+		        			<h2>Precision Hovering</h2>
+		        			<p>
+		        				Flying is now for everyone. Just double tap and you’re up in the air while the new Obstacle Sensing System keeps your Phantom clear of objects in the way. With another tap, Smart Return Home brings it back.
+		        			</p>
+		        		</div>
+		        	</div>
+		        </div>
+		        <div class="swiper-slide"></div>
+				<div class="swiper-slide"></div>
+				<div class="swiper-slide"></div>
+		    </div>
+
+		    <div class="myprogress">
+	    		<div class="tab">
+		    		<a href="javascript:;" class="active">
+		    			<span>
+		    				precision hovering
+		    			</span>
+		    		</a>
+		    		<a href="javascript:;" >
+		    			<span>
+		    				tap to fly
+		    			</span>
+		    		</a>
+		    		<a href="javascript:;">
+		    			<span>
+		    				visual tracking
+		    			</span>
+		    		</a>
+		    		<a href="javascript:;">
+		    			<span>
+		    				sport mode
+		    			</span>
+		    		</a>
+		    		<a href="javascript:;">
+		    			<span>
+		    				extended flight  
+		    			</span>
+		    		</a>
+		    	</div>
+		    	
+		    	<div class="line"></div>
+		    </div>
+		    <!-- If we need pagination -->
+		    <!-- <div class="swiper-pagination"></div> -->
+		    
+		    <!-- If we need navigation buttons -->
+		    <!-- <div class="swiper-button-prev"></div>
+		    <div class="swiper-button-next"></div>
+		     -->
+		    <!-- If we need scrollbar -->
+		    <div class="swiper-scrollbar"></div>
+		</div>
+	</div>
+
+	<div class="wrapper-3">
+		<div class="switch-tab">
+			<ul>
+				<li><a href="javascript:;">aircraft</a></li>
+				<li><a href="javascript:;">vision</a></li>
+				<li><a href="javascript:;">camera</a></li>
+				<li><a href="javascript:;">dji go</a></li>
+				<li><a href="javascript:;">more</a></li>
+			</ul>
+			<div class="line"></div>
+		</div>
+		<div class="container">
+			<div class="feature-box box-1">
+				<div class="col-xs-12 col-sm-4">
+					<p>
+						<img src="/image/wrapper-3/aircraft-1.jpg" alt="">
 					</p>
+					<h3>Revolutionary Materials and Enhanced Agility</h3>
+					<p class="text">The
+						Phantom 4’s magnesium skeleton reduces weight while keeping stiffness at a
+						maximum to minimize vibration. The new core design lifts the center of gravity
+						closer to the Phantom 4’s heart, improving balance, making it more agile and
+						impressively precise.
+					</p>
+					<a href="#modal" class="link-more fancybox-wr3" data-title="Revolutionary Materials and Enhanced Agility" data-content="The
+						Phantom 4’s magnesium skeleton reduces weight while keeping stiffness at a
+						maximum to minimize vibration. The new core design lifts the center of gravity
+						closer to the Phantom 4’s heart, improving balance, making it more agile and
+						impressively precise." data-src="/image/wrapper-3/aircraft-1.jpg">learn more</a>
+				</div>
+				<div class="col-xs-12 col-sm-4">
+					<p>
+						<img src="/image/wrapper-3/aircraft-2.jpg" alt="">
+					</p>
+					<h3>MULTIPLE FLIGHT MODES</h3>
+					<p class="text">Switching flight modes to meet your needs, whether you are looking for simplicity and intelligent navigation, speed or smooth cinematic movements is easy.
+					</p>
+					<a href="#modal" class="link-more fancybox-wr3" 
+					data-title="MULTIPLE FLIGHT MODES" 
+					data-target="Switching flight modes to meet your needs, whether you are looking for simplicity and intelligent navigation, speed or smooth cinematic movements is easy." 
+					data-src="/image/wrapper-3/aircraft-2.jpg">learn more</a>
+				</div>
+				<div class="col-xs-12 col-sm-4">
+					<p>
+						<img src="/image/wrapper-3/aircraft-3.jpg" alt="">
+					</p>
+					<h3>FLY FAR FOR LONGER</h3>
+					<p class="text">Fly for 28 minutes, an increase in effective flight time of 25% from the Phantom 3 Professional. Enjoy 3.1mi (5km) of range, with complete control and a live 720p HD view of everything the camera sees.
+					</p>
+					<a href="#modal" class="link-more fancybox-wr3" 
+					data-title="FLY FAR FOR LONGER" 
+					data-content="Fly for 28 minutes, an increase in effective flight time of 25% from the Phantom 3 Professional. Enjoy 3.1mi (5km) of range, with complete control and a live 720p HD view of everything the camera sees." 
+					data-src="/image/wrapper-3/aircraft-3.jpg">learn more</a>
+				</div>
+			</div>
+			<div class="feature-box box-2">
+				<div class="col-xs-12 col-sm-4">
+					<p>
+						<img src="/image/wrapper-3/aircraft-2-1.jpg" alt="">
+					</p>
+					<h3>Revolutionary Materials and Enhanced Agility</h3>
+					<p class="text">The
+						Phantom 4’s magnesium skeleton reduces weight while keeping stiffness at a
+						maximum to minimize vibration. The new core design lifts the center of gravity
+						closer to the Phantom 4’s heart, improving balance, making it more agile and
+						impressively precise.
+					</p>
+					<a href="#modal" class="link-more fancybox-wr3" data-title="Revolutionary Materials and Enhanced Agility" data-content="The
+						Phantom 4’s magnesium skeleton reduces weight while keeping stiffness at a
+						maximum to minimize vibration. The new core design lifts the center of gravity
+						closer to the Phantom 4’s heart, improving balance, making it more agile and
+						impressively precise." data-src="/image/wrapper-3/aircraft-2-1.jpg">learn more</a>
+				</div>
+				<div class="col-xs-12 col-sm-4">
+					<p>
+						<img src="/image/wrapper-3/aircraft-2-2.jpg" alt="">
+					</p>
+					<h3>MULTIPLE FLIGHT MODES</h3>
+					<p class="text">Switching flight modes to meet your needs, whether you are looking for simplicity and intelligent navigation, speed or smooth cinematic movements is easy.
+					</p>
+					<a href="#modal" class="link-more fancybox-wr3" data-title="MULTIPLE FLIGHT MODES" data-target="Switching flight modes to meet your needs, whether you are looking for simplicity and intelligent navigation, speed or smooth cinematic movements is easy." data-src="/image/wrapper-3/aircraft-2-2.jpg">learn more</a>
+				</div>
+				<div class="col-xs-12 col-sm-4">
+					<p>
+						<img src="/image/wrapper-3/aircraft-2-3.jpg" alt="">
+					</p>
+					<h3>FLY FAR FOR LONGER</h3>
+					<p class="text">Fly for 28 minutes, an increase in effective flight time of 25% from the Phantom 3 Professional. Enjoy 3.1mi (5km) of range, with complete control and a live 720p HD view of everything the camera sees.
+					</p>
+					<a href="#modal" class="link-more fancybox-wr3" data-title="FLY FAR FOR LONGER" data-content="Fly for 28 minutes, an increase in effective flight time of 25% from the Phantom 3 Professional. Enjoy 3.1mi (5km) of range, with complete control and a live 720p HD view of everything the camera sees." data-src="/image/wrapper-3/aircraft-2-3.jpg">learn more</a>
+				</div>
+			</div>
+			<div class="feature-box box-3">
+				<div class="col-xs-12 col-sm-4">
+					<p>
+						<img src="/image/wrapper-3/aircraft-1.jpg" alt="">
+					</p>
+					<h3>Revolutionary Materials and Enhanced Agility</h3>
+					<p class="text">The
+						Phantom 4’s magnesium skeleton reduces weight while keeping stiffness at a
+						maximum to minimize vibration. The new core design lifts the center of gravity
+						closer to the Phantom 4’s heart, improving balance, making it more agile and
+						impressively precise.
+					</p>
+					<a href="#modal" class="link-more fancybox-wr3" data-title="Revolutionary Materials and Enhanced Agility" data-content="The
+						Phantom 4’s magnesium skeleton reduces weight while keeping stiffness at a
+						maximum to minimize vibration. The new core design lifts the center of gravity
+						closer to the Phantom 4’s heart, improving balance, making it more agile and
+						impressively precise." data-src="/image/wrapper-3/aircraft-1.jpg">learn more</a>
+				</div>
+				<div class="col-xs-12 col-sm-4">
+					<p>
+						<img src="/image/wrapper-3/aircraft-2.jpg" alt="">
+					</p>
+					<h3>MULTIPLE FLIGHT MODES</h3>
+					<p class="text">Switching flight modes to meet your needs, whether you are looking for simplicity and intelligent navigation, speed or smooth cinematic movements is easy.
+					</p>
+					<a href="#modal" class="link-more fancybox-wr3" 
+					data-title="MULTIPLE FLIGHT MODES" 
+					data-target="Switching flight modes to meet your needs, whether you are looking for simplicity and intelligent navigation, speed or smooth cinematic movements is easy." 
+					data-src="/image/wrapper-3/aircraft-2.jpg">learn more</a>
+				</div>
+				<div class="col-xs-12 col-sm-4">
+					<p>
+						<img src="/image/wrapper-3/aircraft-3.jpg" alt="">
+					</p>
+					<h3>FLY FAR FOR LONGER</h3>
+					<p class="text">Fly for 28 minutes, an increase in effective flight time of 25% from the Phantom 3 Professional. Enjoy 3.1mi (5km) of range, with complete control and a live 720p HD view of everything the camera sees.
+					</p>
+					<a href="#modal" class="link-more fancybox-wr3" 
+					data-title="FLY FAR FOR LONGER" 
+					data-content="Fly for 28 minutes, an increase in effective flight time of 25% from the Phantom 3 Professional. Enjoy 3.1mi (5km) of range, with complete control and a live 720p HD view of everything the camera sees." 
+					data-src="/image/wrapper-3/aircraft-3.jpg">learn more</a>
+				</div>
+			</div>
+			<div class="feature-box box-4">
+				<div class="col-xs-12 col-sm-4">
+					<p>
+						<img src="/image/wrapper-3/aircraft-1.jpg" alt="">
+					</p>
+					<h3>Revolutionary Materials and Enhanced Agility</h3>
+					<p class="text">The
+						Phantom 4’s magnesium skeleton reduces weight while keeping stiffness at a
+						maximum to minimize vibration. The new core design lifts the center of gravity
+						closer to the Phantom 4’s heart, improving balance, making it more agile and
+						impressively precise.
+					</p>
+					<a href="#modal" class="link-more fancybox-wr3" data-title="Revolutionary Materials and Enhanced Agility" data-content="The
+						Phantom 4’s magnesium skeleton reduces weight while keeping stiffness at a
+						maximum to minimize vibration. The new core design lifts the center of gravity
+						closer to the Phantom 4’s heart, improving balance, making it more agile and
+						impressively precise." data-src="/image/wrapper-3/aircraft-1.jpg">learn more</a>
+				</div>
+				<div class="col-xs-12 col-sm-4">
+					<p>
+						<img src="/image/wrapper-3/aircraft-2.jpg" alt="">
+					</p>
+					<h3>MULTIPLE FLIGHT MODES</h3>
+					<p class="text">Switching flight modes to meet your needs, whether you are looking for simplicity and intelligent navigation, speed or smooth cinematic movements is easy.
+					</p>
+					<a href="#modal" class="link-more fancybox-wr3" 
+					data-title="MULTIPLE FLIGHT MODES" 
+					data-target="Switching flight modes to meet your needs, whether you are looking for simplicity and intelligent navigation, speed or smooth cinematic movements is easy." 
+					data-src="/image/wrapper-3/aircraft-2.jpg">learn more</a>
+				</div>
+				<div class="col-xs-12 col-sm-4">
+					<p>
+						<img src="/image/wrapper-3/aircraft-3.jpg" alt="">
+					</p>
+					<h3>FLY FAR FOR LONGER</h3>
+					<p class="text">Fly for 28 minutes, an increase in effective flight time of 25% from the Phantom 3 Professional. Enjoy 3.1mi (5km) of range, with complete control and a live 720p HD view of everything the camera sees.
+					</p>
+					<a href="#modal" class="link-more fancybox-wr3" 
+					data-title="FLY FAR FOR LONGER" 
+					data-content="Fly for 28 minutes, an increase in effective flight time of 25% from the Phantom 3 Professional. Enjoy 3.1mi (5km) of range, with complete control and a live 720p HD view of everything the camera sees." 
+					data-src="/image/wrapper-3/aircraft-3.jpg">learn more</a>
+				</div>
+			</div>
+			<div class="feature-box box-5">
+				<div class="col-xs-12 col-sm-4">
+					<p>
+						<img src="/image/wrapper-3/aircraft-1.jpg" alt="">
+					</p>
+					<h3>Revolutionary</h3>
+					<p class="text">The
+						Phantom 4’s magnesium skeleton reduces weight while keeping stiffness at a
+						maximum to minimize vibration. The new core design lifts the center of gravity
+						closer to the Phantom 4’s heart, improving balance, making it more agile and
+						impressively precise.
+					</p>
+					<a href="#modal" class="link-more fancybox-wr3" data-title="Revolutionary Materials and Enhanced Agility" data-content="The
+						Phantom 4’s magnesium skeleton reduces weight while keeping stiffness at a
+						maximum to minimize vibration. The new core design lifts the center of gravity
+						closer to the Phantom 4’s heart, improving balance, making it more agile and
+						impressively precise." data-src="/image/wrapper-3/aircraft-1.jpg">learn more</a>
+				</div>
+				<div class="col-xs-12 col-sm-4">
+					<p>
+						<img src="/image/wrapper-3/aircraft-2.jpg" alt="">
+					</p>
+					<h3>MULTIPLE</h3>
+					<p class="text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quaerat delectus, nisi saepe commodi magni cumque distinctio architecto a! Porro velit excepturi necessitatibus maxime. Facere dolor minima vitae repellat numquam, esse.
+					</p>
+					<a href="#modal" class="link-more fancybox-wr3" 
+					data-title="MULTIPLE FLIGHT MODES" 
+					data-target="Switching flight modes to meet your needs, whether you are looking for simplicity and intelligent navigation, speed or smooth cinematic movements is easy." 
+					data-src="/image/wrapper-3/aircraft-2.jpg">learn more</a>
+				</div>
+				<div class="col-xs-12 col-sm-4">
+					<p>
+						<img src="/image/wrapper-3/aircraft-3.jpg" alt="">
+					</p>
+					<h3>FLY FAR</h3>
+					<p class="text">Fly for 28 minutes, an increase in effective flight time of 25% from the Phantom 3 Professional. Enjoy 3.1mi (5km) of range, with complete control and a live 720p HD view of everything the camera sees.
+					</p>
+					<a href="#modal" class="link-more fancybox-wr3" 
+					data-title="FLY FAR FOR LONGER" 
+					data-content="Fly for 28 minutes, an increase in effective flight time of 25% from the Phantom 3 Professional. Enjoy 3.1mi (5km) of range, with complete control and a live 720p HD view of everything the camera sees." 
+					data-src="/image/wrapper-3/aircraft-3.jpg">learn more</a>
+				</div>
+			</div>
+			<!--            MODAL             -->
+			<div id="modal" class="wr-3-cover-box" style="display: none; width: 1200px; height: 520px;">
+				<img src="" alt="">
+				<div class="describe pull-right" style="">
+					<h3>FLY FAR FOR LONGER</h3>
+					<p class="content">The Phantom 4 is flexible enough to meet different flying demands. In Position Mode you can use satellite and Vision Positioning, TapFly, ActiveTrack and Intelligent Flight Modes. Sport Mode adds extra agility and speed, reaching 45mph (72kph) while maintaining satellite and Vision Positioning systems. Atti Mode holds the Phantom’s altitude and level but switches off satellite positioning making it ideal for smooth film making movements.
+					</p>
+					<p class="fancybox-close1"><i class="fa fa-long-arrow-left"></i>back</p>
+				</div>				
+			</div>
+			<!--            MODAL   END          -->
+		</div>
+		<a href="javascript:;" class="buy-link">
+			buy phantom 4
+			<p class="slogan">Visionary Intelligence. Elevated Imagination.</p>
+		</a>
+	</div>
+
+	<footer>	
+		<div class="container">
+			<div class="row">
+				<nav class="link-list col-xs-6 col-sm-2">
+					<a href="javascript:;" class="title">Пункт 1</a>
+					<a href="javascript:;">Пункт 2</a>
+					<a href="javascript:;">Пункт 3</a>
+					<a href="javascript:;">Пункт 4</a>
+					<a href="javascript:;">Пункт 5</a>
+					<a href="javascript:;">Пункт 6</a>
+				</nav>
+				<nav class="link-list col-xs-6 col-sm-2">
+					<a href="javascript:;" class="title">hello 1</a>
+					<a href="javascript:;">hello 2</a>
+					<a href="javascript:;">hello 3</a>
+					<a href="javascript:;">hello 4</a>
+				</nav>
+				<div class="clearfix visible-xs-block"></div>
+				<nav class="link-list col-xs-6 col-sm-2">
+					<a href="javascript:;" class="title">good day 1</a>
+					<a href="javascript:;">good day 2</a>
+					<a href="javascript:;">good day 3</a>
+					<a href="javascript:;">good day 4</a>
+					<a href="javascript:;">good day 5</a>
+					<a href="javascript:;">good day 6</a>
+				</nav>
+				<nav class="link-list col-xs-6 col-sm-2">
+					<a href="javascript:;" class="title">go to job 1</a>
+					<a href="javascript:;">go to job 2</a>
+					<a href="javascript:;">go to job 3</a>
+					<a href="javascript:;">go to job 4</a>
+					<a href="javascript:;">go to job 5</a>
+					<a href="javascript:;">go to job 6</a>
+					<a href="javascript:;">go to job 7</a>
+				</nav>
+				<div class="clearfix visible-xs-block"></div>
+				<nav class="link-list col-xs-6 col-sm-2">
+					<a href="javascript:;" class="title">maximka 1</a>
+					<a href="javascript:;">maximka 2</a>
+					<a href="javascript:;">maximka 3</a>
+					<a href="javascript:;">maximka 4</a>
+				</nav>
+				<nav class="link-list col-xs-6 col-sm-2">
+					<a href="javascript:;" class="title">night 1</a>
+					<a href="javascript:;">night 2</a>
+					<a href="javascript:;">night 3</a>
+					<a href="javascript:;">night 4</a>
+					<a href="javascript:;">night 5</a>
+				</nav>
+			</div>
+			<div class="row footer-meta">
+				<div class="col-xs-12 col-sm-3">
+					<a href="javascript:;">
+						<img class="footer-logo" src="/image/footer-logo-text.png" alt="">
+					</a>
+				</div>
+				<div class="col-xs-12 col-sm-3 col-sm-push-6 footer-social">
+					<a href="javascript:;">
+						<i class="fa fa-facebook-square"></i>
+					</a>
+					<a href="javascript:;">
+						<i class="fa fa-twitter-square"></i>
+					</a>
+					<a href="javascript:;">
+						<i class="fa fa-youtube"></i>
+					</a>
+					<a href="javascript:;">
+						<i class="fa fa-vk"></i>
+					</a>
+					<a href="javascript:;">
+						<i class="fa fa-instagram"></i>
+					</a>
+				</div>
+				<div class="col-xs-12 col-sm-6 col-sm-pull-3">
+					<div class="footer-feedback">
+						<p>Feedback on web experience？</p>
+						<p>Copyright © 2016 DJI All Rights Reserved. </p>
+					</div>
 				</div>
 			</div>
 		</div>
+	</footer>
+	<!--  <div class="wrapper-1">
+		<video id="wr-1-video" autoplay="true"  muted="muted" >
+			<source src="video/cloud12.mp4">
+		</video>
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col-xs-12">
+					
+				</div>
+				<h1 class="text-center">qwe</h1>
+			</div>
+		</div>
 	</div>
-</div>
+
+	<div class="wrapper-2">
+		<div class="container">
+			<div class="row">
+				<div class="col-xs-4">
+					<h1 class="text-center">Мама привет</h1>
+				</div>
+			</div>
+		</div>
+	</div> -->
+
+	
+	<script src="js/bootstrap.js"></script>
+	<script src="/js/jquery-scrollspy.js"></script>
+	<script src="js/salvattore.min.js"></script>
+<script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')</script>	<script>
+		$(function(){
+			$('[data-toggle="tooltip"]').tooltip();
+			$('[data-toggle="popover"]').popover();
+		});
+	</script>
+	<script>
+	function scrollWidth(){
+	    var div = $('<div>').css({
+	        position: "absolute",
+	        top: "0px",
+	        left: "0px",
+	        width: "100px",
+	        height: "100px",
+	        visibility: "hidden",
+	        overflow: "scroll"
+	    });		    
+	    $('body').eq(0).append(div);		    
+	    var width = div.get(0).offsetWidth - div.get(0).clientWidth;	    
+	    div.remove();
+	    
+	    return width;
+	}
+	//здесь задаем ширину блока с видео
+	// $(function(){
+	// 	//alert( document.documentElement.scrollWidth );
+	// 	// if(screen.availHeight >=document.documentElement.clientHeight){
+	// 	// 	width=$(window).width();
+	// 	// }else
+	// 	var width=$(window).width() - scrollWidth();
+	// 	var height=width*9/16;
+	// 	$("#wr-1-video").prop("width",width);
+	// 	$("#wr-1-video").prop("height",height);
+
+	// 	$(".wrapper-1").css({"width" : width, "height" : height})
+	// });
+	
+
+	/************выпадающее меню**************/
+	var interval_menu= new Object();
+	//$("#123").children(".children").hide();
+
+	function setVisibility(obj, visible){
+		if(visible == true){
+			obj.slideDown(250);
+		}else
+			obj.slideUp(250);
+	}
+	function ClearTimeOut(obj){
+		for(var cur in obj){
+			clearTimeout(obj[cur]);
+		}
+	}
+	$("#col-menu").on("mouseover mouseout",function(event){
+		if(event.type == "mouseover"){
+			setVisibility($(this).children(".children"),true);
+			ClearTimeOut(interval_menu);
+		}
+		if(event.type == "mouseout"){
+			var t=$(this).children(".children").eq(0);
+			var cmd="setVisibility(t,false)";
+			interval_menu[this] = setTimeout(function(){
+															setVisibility($("#col-menu").children(".children").eq(0),false)
+														}
+														,100);
+		}
+	});
+
+	$(".children").on("mouseover mouseleave",function(event){
+		if(event.type == "mouseover"){
+			setVisibility($(this),true);
+			ClearTimeOut(interval_menu);
+		}
+		if(event.type == "mouseleave"){
+			interval_menu[this] = setTimeout(function(){
+						setVisibility($(".children"),false);
+					}
+					,100);
+		}
+	});
+		/************выпадающее меню конец**************/
+
+	
+
+	// работа с изображением в выпадающем меню
+
+	var divImg=$(".child-img"); //  вся выборка объектов с картинками
+	var divImgWidth=555;
+	var divImgHeight=260;
+	divImg.children('img').prop("src","image/phantom_comparison.jpg").css({"width":divImgWidth, "height" : divImgHeight, "min-width": 500});
+
+	//действие для ссылочки
+	var child_content_a=$(".child-cont a");
+	var child_img=divImg.children("img");
+
+	function changeImage(object,src,srcDefault,width,height){
+		object.on("mousemove mouseleave",function(event){
+			if(event.type == "mousemove"){
+				child_img.prop("src",src)
+									.css({"width":width, "height" : height});	
+				event.stopPropagation();
+			}else{
+				child_img.prop("src",srcDefault)
+									.css({"width":width, "height" : height});
+				event.stopPropagation();
+			}
+		});
+	}
+	changeImage(child_content_a.eq(0),"/image/mavic1.png","/image/mavic1.png",divImgWidth, divImgHeight);
+	changeImage(child_content_a.eq(1),"/image/phantom4.png","/image/mavic1.png",divImgWidth, divImgHeight);
+	changeImage(child_content_a.eq(2),"/image/phantom3.jpg","/image/mavic1.png",divImgWidth, divImgHeight);
+	changeImage(child_content_a.eq(3),"/image/phantom_comparison.jpg","/image/mavic1.png",divImgWidth, divImgHeight);
+	changeImage(child_content_a.eq(4),"/image/Inspire_1.png","/image/mavic1.png",divImgWidth, divImgHeight);
+	changeImage(child_content_a.eq(5),"/image/zenmus.jpg","/image/mavic1.png",divImgWidth, divImgHeight);
+
+	/************************************/ 
+ 
+	// слайдер с видео swiper
+
+	var mySwiper = new Swiper ('.swiper-cont', {
+    // Optional parameters
+    direction: 'horizontal',
+    loop: true,
+        
+    // Navigation arrows
+    nextButton: '.swiper-button-next',
+    prevButton: '.swiper-button-prev',
+    
+    });
+	//выпадающая менюшка снизу
+	$(".swiper-cont").hide();
+	//выезжающий блок с видео
+	var speed=400
+	$(".video-btn-box").on("click",function(){
+		$(".swiper-cont").slideToggle(speed);
+	});
+
+	var count=2;
+	$(".video-btn-box").on("click",function(){
+		if(count %2 ==1){
+			$(this).animate({
+				"bottom" : "-=210"				
+			},
+			{
+				"duration" : speed
+			}).children("i")
+				.removeClass("fa-angle-double-down")
+				.addClass("fa-angle-double-up");	
+		}
+		if (count % 2 == 0) 
+			$(this).animate({
+				"bottom" : "+=210"
+			},{
+				"duration" : speed
+			}).children("i")
+			   .removeClass("fa-angle-double-up")
+			   .addClass("fa-angle-double-down");
+		count++;
+	});
+
+	$(function(){
+
+	$('.sticky').Stickyfill();		
+
+	$("#toTop").click(function(e){
+		e.preventDefault();
+		$("html,body").stop().animate({scrollTop:0},300,'swing');
+	});
+
+	
+	});
+	
+	
+	$("#toTopHover").hide();
+
+	$(window).scroll(function(){
+		var height=$("header").height() + $(".wrapper-1").height() + $(".sticky-wrapper").height();
+		if(window.pageYOffset > height)
+			$("#toTopHover").show();
+		if(window.pageYOffset < height)
+			$("#toTopHover").hide();
+	});
+
+	// блок 3
+	var mySwiper_2Class=".swiper-cont1";
+	var mySwiper_2 = new Swiper (mySwiper_2Class, {
+    // Optional parameters
+    direction: 'horizontal',
+    loop: true,
+	
+	simulateTouch: false,//для того чтобы курсором нельзя было двигать слайды     
+    // If we need pagination
+    // pagination: '.swiper-pagination',
+    
+    // // Navigation arrows
+    // nextButton: '.swiper-button-next',
+    // prevButton: '.swiper-button-prev',
+    
+    // And if we need scrollbar
+    scrollbar: '.swiper-scrollbar'
+  });
+	$(".swiper-cont1").on("click",function(e){
+		e.preventDefault();
+	});
+	//mySwiper_2.lockSwipes () 
 
 
+	function changeBackgroungImage(obj,srcImage){
+		obj.css("background-image","url("+srcImage+")");
+	}
 
+	// onSliderMove(mySwiper_2,function(){
+	// 	console.log(123456789);
+	// });
+	mySwiper_2.on("slideChangeStart",function(){
+		
+	});
+	function changeSlideOnMove(obj,indexSlide){
+		//indexofQuery - number element on query
+		//indexSlide -number sslide
+		obj.on("mousemove",function(){
+			mySwiper_2.slideTo(indexSlide);
+			$(this).addClass("active").siblings().removeClass("active");						
+		});
+	}
+
+	var myprogress = $(".wrapper-2 .myprogress a");
+
+	changeSlideOnMove(myprogress.eq(0),1);
+	changeSlideOnMove(myprogress.eq(1),2);
+	changeSlideOnMove(myprogress.eq(2),3);
+	changeSlideOnMove(myprogress.eq(3),4);
+	changeSlideOnMove(myprogress.eq(4),5);
+
+	var wr2Swiper_slide=$(".wrapper-2 .swiper-slide");
+
+	changeBackgroungImage(wr2Swiper_slide.eq(0),"/image/slider_2-1.jpg");
+	changeBackgroungImage(wr2Swiper_slide.eq(1),"/image/slider_2-2.jpg");
+	changeBackgroungImage(wr2Swiper_slide.eq(2),"/image/slider_2-3.jpg");
+	changeBackgroungImage(wr2Swiper_slide.eq(3),"/image/slider_2-4.jpg");
+	changeBackgroungImage(wr2Swiper_slide.eq(4),"/image/slider_2-5.jpg");
+	changeBackgroungImage(wr2Swiper_slide.eq(5),"/image/slider_2-1.jpg");
 
 
 	
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-<script src="js/bootstrap.js"></script>
-<script src="js/salvattore.min.js"></script>
-<script src="lib/action.js"></script>
-<script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')</script>
-<script>
-	$(function(){
-		$('[data-toggle="tooltip"]').tooltip();
-		$('[data-toggle="popover"]').popover();
+	var cntnt_box=$(".content-box");
+	cntnt_box.css("opacity","0	");
+	
+	function ScrollHideAndShow(object,topAddHeight,botMinusHeight){
+		// topAddHeight будет появляться раньше на опр кол-во пикселей
+		topAddHeight=parseFloat(topAddHeight);
+		botMinusHeight=parseFloat(botMinusHeight);
+		var position=object.offset();
+		object.scrollspy({
+			min: position.top-topAddHeight,
+			max:position.top + object.height() - botMinusHeight,
+			onEnter:function(){
+				console.log("enter");
+				object.animate({
+					"margin-top":"-=30",
+					"opacity":"+=0.9"
+				});
+			},
+			onLeave:function(){
+				console.log("leave");			
+				object.animate({	
+					"margin-top":"+=30",
+					"opacity":"-=0.9"
+				});
+			}
+		});
+	}
+	ScrollHideAndShow(cntnt_box.eq(0),710,100);
+	ScrollHideAndShow(cntnt_box.eq(1),710,100);
+
+	cntnt_box.each(function(){
+		var obj=$(this);
+		mySwiper_2.on("slideChangeStart",function(e){
+			console.log("Swiper event");
+			var marginTop=obj.css("margin-top");
+			// obj.css({			
+			// 			"margin-top":"+=30",
+			// 			"opacity":0
+			// });
+			obj.css({			
+						"margin-top":250,
+						"opacity":0
+			}).animate({
+						"margin-top":220,
+						"opacity":"+=0.8"
+			});
+		});
 	});
-</script>
+	
+
+	/****************************************************************/ 
+	/*************************wrapper-3******************************/ 
+	/****************************************************************/ 
+	var AllASwitchtab=$(".wrapper-3 .switch-tab ul li ");
+	AllASwitchtab.each(function(){
+		var obj=$(this);
+		obj.on("click.style",function(){
+			obj.children("a").addClass("wrapper-3-active");
+			obj.siblings().children("a").removeClass("wrapper-3-active");
+		});
+	});	
+	AllASwitchtab.children("a").eq(0).addClass("wrapper-3-active");
+	//при нажатие появляются разные блоки
+
+
+	// при нажатие на кнопку появляется модальное окно
+	// $(".fancybox-wr3").fancybox({
+	// 	padding: 0,
+	// 	height:520
+	// });
+	$(".wr-3-cover-box .describe").css({
+		"width" : 440,
+		"padding": "100px 60px 75px"
+	});
+	$(".wr-3-cover-box .describe h3").css({
+		"text-transform": "uppercase",
+		"font-size": 20,
+		"font-weight": 500,
+		"line-height": "25px"
+	});
+	$(".wr-3-cover-box .describe .content").css({
+		"height": 206,
+		"color" : "#707173",
+		"font-size": 14
+	});
+	$(".fancybox-wr3").fancybox({
+		//maxWidth	: 800,
+		maxHeight	: 520,
+		//fitToView	: false,
+		padding     : 0,
+		width		: 1200,
+		height		: 520,
+		autoSize	: false,
+		autoResize  : false,// как открылось так и осталось 
+		closeClick	: false,
+		openEffect	: 'none',
+		closeEffect	: 'none',
+		overflow    : 'visible'
+	});
+	$(".fancybox-close1").on("click",function(){
+		$.fancybox.close();
+	}).css({
+		"cursor":"pointer",
+		"color":"#00b5e2"
+	});
+
+	$(".wrapper-3 .feature-box a").each(function(){
+		var obj=$(this);
+		var wr3CoverBox=$(".wr-3-cover-box")
+		obj.on("click",function(){
+			wr3CoverBox.children("img").css({
+											 "width":760,
+											 "height":520
+										})
+										.attr('src',obj.data('src'));
+			wr3CoverBox.find("h3").text(obj.data('title'));
+			wr3CoverBox.find('p.content').text(obj.data('content'));
+		});
+	});
+	// переключение блоков по нажатию
+	function changeBlockOnClick(obj,block){
+		obj.on("click",function(){
+			block.animate({"opacity":0},200).siblings().hide();
+		});
+	}
+
+	var Handlers=$(".wrapper-3 .switch-tab a");
+	var blocks=$(".wrapper-3 .feature-box");
+	for(var i=0 ; i<5 ; i++)
+		changeBlockOnClick(Handlers.eq(i),blocks.eq(i));
+
+
+	$(".wrapper-3 .buy-link").hover(function(){
+			$(this).animate({
+					"color": "#44a8f2",
+					"background-color": "#fff"
+			},400);
+		},function(){
+			$(this).animate({
+					"color": "#fff",
+					"background-color": "#44a8f2"
+			},400);
+		}			
+	);
+
+	/****************************************************************/ 
+	/*************************wrapper-3 end***************************/ 
+	/****************************************************************/ 
+	</script>
+	 
 </body>
 </html>
