@@ -36,7 +36,8 @@ header  a{
 	background-color: inherit;
 }
 header a{
-	border: 5px solid white;
+	border-top: 5px solid white;
+	border-bottom: 5px solid white;
 }
 header a.navbar-brand{
 	border-top-width: 0px;
@@ -65,10 +66,13 @@ a:hover, a:focus {
 
 .navbar{
 	position: static;
-	height:60px; 
 	margin-bottom: 0px;
 }
-
+@media screen and (min-width: 768px){
+	.navbar{
+		height: 60px;
+	}
+} 
 .navbar-shop{
 	border-color:#44a8f2; 
 	color: #fff;
@@ -83,8 +87,34 @@ a:hover, a:focus {
 .nav > li{
 	position: static;
 }
-#resp-menu{
-	height: 60px;
+
+
+.navbar-form-search{
+	position: absolute;
+	left:20%;
+	width: 156px;
+	margin-top:13px; 
+	display: inline;
+	border-left:1px solid #979797;
+}
+@media screen and (min-width:  768px) and (max-width: 1199px){
+	.navbar-form-search{
+		left:10%;
+	}
+}
+.navbar-form-search:focus{
+	outline: none;
+	box-shadow: none;
+}
+.form-control{
+	border-width: 0;
+	box-shadow: none;
+}
+.form-control:focus{
+	box-shadow: none;
+}
+.head-search-box{
+	display: none;	
 }
 /************children************************/
 /*.children{
@@ -99,40 +129,37 @@ a:hover, a:focus {
 
 li .children{
   display: none;
-  margin-top: 9px;
   position: absolute;
-  top:50px;
   left:0;
   width:100%;
   font-size:13px;
   background-color: #fff;
   z-index: 10;
-  box-shadow: 0/*сдвиг по у*/ 6px/*сдвиг по х*/ 14px 0 rgba(226,226,226,.5);
+  /*box-shadow: 0/*сдвиг по у*/ 6px/*сдвиг по х*/ 7px 0 rgba(226,226,226,.5);*/
 }
 
 .child-cont{
 	padding-top: 30px;
 	color: #979797;
 	padding-bottom: 30px;
-	max-height: 310px;
+	height: 320px;
 	overflow: hidden;
 }
 
-.child-cont p{
+.child-cont .child-title{
 	font-weight: bold;
 }
-
 .child-cont p img{
 	object-fit: cover;
 }
 
-.child-cont li{
-	margin: 5px 0px 5px 0px;
-	list-style: none;
-}
-
 .child-cont ul{
 	padding-left: 0px;
+}
+
+.child-cont li{
+	padding: 6px 0px 6px 0px;
+	list-style: none;
 }
 
 .child-cont a{
@@ -149,6 +176,52 @@ li .children{
 }
 .opened{
 
+}
+
+.child-cont .split{
+	margin-top:15px; 
+}
+.child-cont .split:before{
+	content: '';
+	height: 1px;
+	background-color: #979797;
+	width: 25px;
+	top: -7px;
+	position: relative;
+	display: block;
+}
+
+#col-menu-4.single{
+	position: relative;
+}
+#col-menu-5.single{
+	position: relative;
+}
+
+.children-list{
+	width: 150px;
+	list-style: none;
+	padding-left: 0px;
+	font-size: 12px;
+	color: #979797!important;
+}
+
+.children-list li a{
+	width: 150px;
+	background-color: #fff;
+	display: block;
+	padding: 8px 16px;
+}
+.children-list li a:hover{
+	text-decoration: none;
+	background-color: #979797;
+	color: #fff;
+}
+#col-menu-6.single{
+	position: relative;
+}
+#col-menu-6 {
+	width: 130px;
 }
 /************children end********************/
 
@@ -203,7 +276,17 @@ li .children{
 	height: 210px;
 	left: 0;
 	position: absolute;
-	bottom: 0;
+}
+.swiper-cont img{
+}
+.swiper-cont .swiper-button-prev{
+	left: 15%;
+}
+.swiper-cont .swiper-button-next{
+	right: 15%;
+}
+.swiper-cont ul{
+	padding-left: 0px;
 }
 .swiper-cont ul{
 	list-style: none;
@@ -228,21 +311,28 @@ li .children{
 	color: white;
 	border-top-left-radius: 15px;
 	border-top-right-radius: 15px;
+	cursor:pointer;
 }
 
 /***************wrapper-1 end*********************/
 
 /******************header2 ******************************/
 .sticky-wrapper{
-	/*background-image: url(/image/quad1.jpg);*/
-	/*background-size: cover;*/
 	background-color: #f8f8f8;
 }
 
 .sticky-wrapper a{
 	color: #979797;
-} 
-
+}
+@ 
+.sticky-wrapper ul li:first > a{
+	background-color: red;
+}
+@media screen and (min-width: 768px) and (max-width: 991px){
+	.sticky-wrapper .container{
+		width: 650px;
+	}
+}
 .sticky {
     position: -webkit-sticky;
     position: sticky;
@@ -251,13 +341,20 @@ li .children{
     opacity: 0.9;
     z-index: 10;
 }
-
+.sticky .navbar{
+	height: 50px;
+}
 .fix-search {
 	position: fixed;
 	top: 10px;
 }
 .navbar-lg{
 	width: 100%;
+}
+@media screen and (min-width: 768px) and (max-width: 991px){
+	header .container{
+		width: 750px;
+	}
 }
 /********************header2 end***************************/
 
@@ -288,6 +385,24 @@ li .children{
 	display: block;
 	left: 15%;
 }
+@media screen and (max-width: 767px){
+	.myprogress{
+		width: 500px;
+	}	
+}
+@media screen and (min-width: 768px) and (max-width: 991px){
+	.myprogress{
+		width: 700px;
+	}
+}
+@media screen and (min-width: 992px) and (max-width: 1199px){
+	.myprogress{
+		width: 900px;
+	}
+}
+@media screen and (min-width: 1200px){
+
+}
 .myprogress .tab{
 }
 .myprogress .tab a{
@@ -311,11 +426,17 @@ li .children{
 .myprogress .line{
 	top:40px;
 	position: absolute;
-	width: 1140px;
+	width: 100%;
 	height: 1px;
 	background: #fff;
 	z-index: -1000;
 }
+@media screen and (max-width: 1199px){
+	.myprogress .line{
+		top: 68px;
+	}
+}
+
 /*.myprogress .tab a:hover{
 	color: white;
 	opacity: 1;
@@ -328,7 +449,6 @@ li .children{
 }
 /*// работа с появляющимся блоком*/
 .wrapper-2 .content-box{
-	/*background-color: rgba(112,113,115,.9);*/
 	background-color: rgb(112,113,115);
 	opacity: 0.9;
 	color: white;
@@ -347,6 +467,12 @@ li .children{
 	margin-left: 140px;
 	color: black;
 }
+.wrapper-2 .content-box{
+	opacity: 0.9;
+}
+.wrapper-2 .content-box img{
+	opacity: 1;
+}
 /********************wrapper-2 end***********************/
 
 
@@ -359,6 +485,11 @@ li .children{
 	margin: 0 auto 0 auto;
 	width: 860px;
 	margin-bottom: 60px;
+}
+@media screen and (max-width: 991px){
+	.wrapper-3 .switch-tab{
+		width: 600px;
+	}
 }
 .wrapper-3 .switch-tab ul{
 	padding-left: 0px;
@@ -390,18 +521,39 @@ li .children{
 	background-color:#eaeaea;
 	z-index: -1000;
 }
+@media screen and (max-width: 991px){
+	.wrapper-3 .line{
+		width: 600px;
+	}
+}
 .wrapper-3-active{
 	color: #44a8f2 !important;
 	border-bottom: 2px solid #44a8f2;
 }
+
+
 .wrapper-3 .feature-box{
 	display: none;
 }
 .wrapper-3 .box-1{
 	display: block;
 }
+.wrapper-3 .feature-box p{
+	overflow: hidden;
+}
 .wrapper-3 .feature-box img{
-	width: 100%
+	width: 100%;
+	-o-transition: all 0.5s ease-in-out;
+    -moz-transition: all 0.5s ease-in-out;
+    -webkit-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
+}
+.wrapper-3 .feature-box img:hover{
+	-o-transform: scale(1.1);
+	-ms-transform: scale(1.2);
+	-moz-transform: scale(1.1);
+	-webkit-transform: scale(1.1);
+	transform: scale(1.1);
 }
 .wrapper-3 .feature-box .text{
 	font-size: 14px;
@@ -427,6 +579,36 @@ li .children{
 .wrapper-3 .feature-box a:focus{
 	text-decoration: none;
 }
+.wrapper-3 .feature-box a.link-more{
+	margin-bottom: 10px;
+	position: relative;
+	display: inline-block;
+}
+.wrapper-3 .feature-box a.link-more:after{
+	content: '';
+	bottom: -2px;/*минус ширина рамки, чтобы линия расходилась по рамке*/
+	left: 0;
+	position: absolute;
+	display: inline-block;
+	height: 2px;
+	width: 100%;
+	background-color: red;
+	transition: transform 0.5s ease-in;
+	-o-transform: scaleX(0);
+	-ms-transform: scaleX(0);
+	-moz-transform: scaleX(0);
+	-webkit-transform: scaleX(0);
+	transform: scaleX(0);
+}
+.wrapper-3 .feature-box a.link-more:hover:after{
+	visibility: visible;
+	-o-transform: scaleX(1);
+	-ms-transform: scaleX(1);
+	-moz-transform: scaleX(1);
+	-webkit-transform: scaleX(1);
+	transform: scaleX(1);
+}
+
 /*модальное окно имеет класс модал не воспринимает fancybox css вообще*/
 .wrapper-3 .wr-3-cover-box .describe{
 	width: 440px;
@@ -532,22 +714,18 @@ footer .footer-feedback{
 
 }
 @media screen and (min-width: 768px) and (max-width: 991px){
-	.masonry[data-columns]::before{
-		content: '2 .col-xs-6';
-	}	
+	.container{
+		width: 650px;
+	}
 }
 @media screen and (min-width: 992px) and (max-width: 1199px){
-	.masonry[data-columns]::before{
-		content: '3 .col-md-4';
-	}
+
 	header .container{
-		min-width: 1170px;
+		min-width: 100%;
 	}
 }
 @media screen and (min-width: 1200px){
-	.masonry[data-columns]::before{
-		content: '3 .col-xs-4';
-	}
+
 }
 
 
