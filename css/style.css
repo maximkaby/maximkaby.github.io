@@ -22,6 +22,23 @@ header{
 	background-color: #fff;
 	text-transform: uppercase;
 }
+@media screen and (min-width: 768px) and (max-width: 991px){
+	header .container{
+		width: 750px;
+	}
+}
+@media screen and (min-width: 992px) and (max-width: 1199px){
+	header .container{
+		padding-left: 0px;
+		padding-right: 0px;
+	}
+	#resp-menu{
+		padding-right: 0px;
+	}
+	header .navbar-add{
+		margin-right: 0;
+	} 
+}
 header .navbar{
 	border-width: 0px;
 }
@@ -351,11 +368,7 @@ li .children{
 .navbar-lg{
 	width: 100%;
 }
-@media screen and (min-width: 768px) and (max-width: 991px){
-	header .container{
-		width: 750px;
-	}
-}
+
 /********************header2 end***************************/
 
 
